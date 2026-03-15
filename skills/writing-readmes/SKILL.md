@@ -59,6 +59,21 @@ Adapt weight by project type. Not every section needs equal depth.
 - Buzzwords: "revolutionary", "cutting-edge", "next-generation"
 - Implementation details before establishing why anyone should care
 
+### Opening Patterns
+
+Six shapes that problem openings take. Pick the one that fits your project:
+
+| Pattern | Shape | Example | Best for |
+|---|---|---|---|
+| **The contradiction** | "X works but Y is broken" | "Your tests pass but the UI is broken." | Tools that fix a gap between what exists and what's needed |
+| **The time bomb** | "You do X. Later, Y blows up" | "You build fast with AI. Three weeks later, no one can explain why any decision was made." | Tools that prevent future pain |
+| **The relatable moment** | One sentence everyone's lived | "You have a 45-minute commute and 12 tabs you'll never read." | Consumer products, personal tools |
+| **The mirror** | "Are you actually doing X?" | "You work with AI every day. Are you actually getting better at it, or just getting more done?" | Self-improvement, analytics, coaching tools |
+| **The invisible cost** | "You spend X on Y" | "You spend 2 hours making 10 slides. Most of that time is formatting, not thinking." | Productivity tools, automation |
+| **The honest failure** | "This didn't work. Here's what we learned." | "This project failed. That's the point." | Spikes, experiments, learning projects |
+
+Don't force a pattern. Read the project, feel the problem, and the right shape usually emerges. If none fits, the project may not have a clear enough problem yet — and that's worth solving before writing the README.
+
 ### Quick start
 
 The most important section for every project type. Must contain:
