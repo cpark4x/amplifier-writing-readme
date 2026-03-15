@@ -1,41 +1,42 @@
 ---
 name: writing-readmes
-description: Use when writing or rewriting a README for any project. Covers dual-audience structure (humans scanning GitHub + AI agents parsing for capabilities), problem-first opening, concrete output examples, and quality criteria.
+description: Use when writing or rewriting a project README, or when a README draft feels generic, reads like a feature list, or fails the 30-second test — reader can't tell what it does or whether it's relevant to them.
 ---
 
-# Writing READMEs
+# writing-readmes
 
-## Overview
+A README is for humans. But increasingly, AI reads it first — someone pastes a repo link and says "explain this to me" or "should I use this?" The AI becomes the reader, the interpreter, and the recommender.
 
-A README serves two audiences simultaneously: a human deciding whether to try your project, and an AI agent parsing to understand capabilities and routing decisions. Every sentence should serve at least one, ideally both.
+This doesn't mean you write for AI. It means the bar for clarity just went up. Vague descriptions that a human might skim past will cause an AI to misrepresent your project. A README that's clear enough for AI to explain correctly is a README that's clear enough for anyone.
 
-## Principles
+## Five Principles
 
-**Problem before solution.** Start with pain the reader recognizes. The reader should feel uncomfortable before you offer relief. A feature list is not an opening.
+**1. Problem before solution.** Open with pain, not product. The reader should feel the problem before they see your name. A feature list is not an opening.
 
-**Show, don't describe.** One before/after example is worth more than three paragraphs of explanation. Show actual output.
+**2. Show, don't describe.** A before/after example is the most persuasive element in a README. For tools: show output. For libraries: show code. For visual projects: show a screenshot. The medium changes; the principle doesn't.
 
-**Timing is respect.** Tell people how long things take. If your tool has different speed modes, name them with times.
+**3. Timing is respect.** Tell people how long things take — to install, to get a first result, to run the full pipeline. People make adoption decisions based on time investment.
 
-**Honest about limits.** Name what the tool doesn't do and where it's improving. Credibility comes from specificity and honesty, not from silence.
+**4. Honest about limits.** Name what you can't do yet. Credibility comes from specificity and honesty, not from silence.
 
-**README pitches, usage guide teaches.** The README answers "why should I care?" in 60 seconds. The usage guide answers "how do I do this?" Don't mix them.
+**5. README pitches, usage guide teaches.** The README answers "why should I care?" in 60 seconds. The usage guide answers "how do I do this." If you're explaining configuration flags, you've crossed the line.
 
 ## Structure
 
-Six sections, each earning its place:
+Adapt weight by project type. Not every section needs equal depth.
 
-### 1. Opening (most important)
+| Section | What it covers | Weight by type |
+|---|---|---|
+| **Opening** | Problem → solution → what's different | Heavy for tools/products. Light for libraries (the code speaks). Skip the pitch for internal tools — go straight to usage. |
+| **What it looks like** | Before/after, screenshot, code example, demo GIF | Heavy for visual projects and tools with output. A code snippet for libraries. |
+| **Components** | What's in the box, user-facing only | Only if there are multiple components. Skip for single-purpose libraries. |
+| **Quick start** | Install → first result → "that's it" | Always heavy. This is the one section every README needs to nail. |
+| **How it works** | User-perspective explanation of what happens | Medium for tools with pipelines or modes. Light or skip for simple libraries. |
+| **Built by** | Person, affiliation, motivation | One line. Always. |
 
-3-5 short paragraphs. No bullet lists, no headers. Must:
+### Opening
 
-- Start with a visceral problem, not a feature description
-- Make the reader feel the pain before offering relief
-- Explain what's architecturally different, not just "better"
-- Mention speed/timing naturally
-- Include a concrete quality or credibility signal
-
-**Test:** Replace your project name with [PROJECT]. If the opening still works, it's too generic.
+3-5 short paragraphs for tools and products. For libraries, 1-2 sentences plus a code example is often better — the code IS the pitch.
 
 **Anti-patterns:**
 - Starting with "[Project] is a..." or "A tool that..."
@@ -43,65 +44,47 @@ Six sections, each earning its place:
 - Buzzwords: "revolutionary", "cutting-edge", "next-generation"
 - Implementation details before establishing why anyone should care
 
-### 2. What the output looks like
+### Quick start
 
-Before/after side by side. The naive/typical approach vs your project's output. The contrast should be visceral — no explanation needed. Close with a single line reinforcing what the example proved.
-
-### 3. Components table
-
-Split into primary and secondary if many. Two columns: Name and What it does. Drop internal components users don't invoke. Cut status columns unless versions differ.
-
-### 4. Quick start
-
-Simplest path to a first result:
+The most important section for every project type. Must contain:
 1. Install (one code block)
-2. Use it (one concrete example with a real-sounding request, not placeholder text)
-3. "That's it."
+2. First result (one concrete example — real-sounding, not placeholder text)
+3. "That's it." or equivalent signal that the reader is done
+4. Link to full guide for everything else
 
-Link to full usage guide for everything else.
+## Quality Tests
 
-### 5. How it works
+Run all four before shipping:
 
-Explain what happens from the user's perspective, not how it's built. If multiple modes exist, describe each: what triggers it, what happens, how long, what you get. End with the stability contract.
+**Substitution test.** Replace your project name with [PROJECT]. If the opening still works, it's too generic. Rewrite until removal of the name breaks the sentence.
 
-### 6. Built by
+**"So what?" test.** Read each sentence. If a reader could respond "so what?", you've described a feature instead of an outcome. "Uses advanced AI" → so what. "Zero fabricated claims on baseline evaluation" → specific, verifiable.
 
-Real person. Real affiliation. One line about why this exists. Skip inflated titles.
+**30-second test.** Show the README to someone for 30 seconds. Can they tell you what it does and whether it's relevant to them? If not, it fails.
 
-## Quality Checklist
+**Explain-it-back test.** Paste your README into an AI and ask "explain this project to me." If the AI gets it wrong or stays vague, your README isn't clear enough. This is the real-world test — it's what most people will actually do.
 
-Rate each dimension 1-10. Target 8+ on all:
+## What Bad Looks Like
 
-| Dimension | Question |
-|---|---|
-| Problem clarity | Does the reader feel the pain in the first paragraph? |
-| Solution clarity | Can they explain what your project does after 30 seconds? |
-| Concreteness | Is there at least one before/after example? |
-| Dual-audience | Would both a human and an AI agent get what they need? |
-| Timing | Does the reader know how long things take? |
-| Honesty | Are limitations named? |
-| Scannability | Can someone get the gist from bold text and headers alone? |
-| Length | Is every section earning its place? |
+> **MyTool** is a powerful, cutting-edge framework for automated research and analysis. It leverages state-of-the-art AI to produce comprehensive reports with advanced source verification capabilities.
 
-## Common Mistakes
+Fails every test. Replace "MyTool" with anything — sentence still works. No problem stated. No specifics. Every adjective is doing the work a concrete claim should do.
 
-**Writing for developers only.** AI agents need capability signals, invocation patterns, and routing boundaries — not just human-readable prose.
+## What Good Looks Like
 
-**Burying the quick start.** If someone scrolls past philosophy and architecture to find the install command, they leave.
+**For a tool/product:**
+> You ask an AI to research something and write it up. It reads well. Then someone asks "where did this number come from?" and you don't know. The document is fluent and completely unverifiable.
 
-**Repeating across README and usage guide.** If both say the same thing, one is redundant. README pitches; usage guide teaches.
+Pain first. Project name nowhere. The reader is nodding before you've introduced your solution.
 
-**Feature lists instead of outcomes.** "Source tiering, per-claim confidence, evidence gaps" is a feature list. "Output you can stake your reputation on" is an outcome. Lead with outcomes.
+**For a library:**
+> ```python
+> app = FastAPI()
+>
+> @app.get("/")
+> def read_root():
+>     return {"Hello": "World"}
+> ```
+> High performance, easy to learn, fast to code, ready for production.
 
-**No timing information.** A 15-minute pipeline feels different from a 15-second API call. Name it.
-
-## For AI Agents
-
-When writing a README using this skill:
-1. Read the project's code/docs to understand what it does
-2. Identify the core problem it solves — what pain does the user have today?
-3. Find or create a concrete before/after example
-4. Draft using the six-section structure
-5. Self-rate against the quality checklist
-6. Revise any dimension below 8
-7. Present to the user for review — don't apply without confirmation
+Code first. Four claims, all testable. The code IS the pitch.
