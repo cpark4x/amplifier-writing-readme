@@ -1,0 +1,11 @@
+bundle:
+  name: writing-readme-behavior
+  version: 1.0.0
+  description: Registers the writing-readmes skill via tool-skills.
+
+tools:
+  - module: tool-skills
+    source: git+https://github.com/microsoft/amplifier-module-tool-skills@main
+    config:
+      skills:
+        - "git+https://github.com/cpark4x/amplifier-writing-readme@main#subdirectory=skills"
