@@ -13,6 +13,10 @@ This doesn't mean you write for AI. It means the bar for clarity just went up. V
 
 Run the quality tests on the existing README first. If it passes, don't rewrite — suggest the 1-2 specific improvements that would make it better. A precise edit beats a rewrite every time.
 
+**Look for buried gold.** Scan the project's docs, vision files, and design briefs for lines that are sharper than what's in the README. The best improvement is often pulling one compelling detail from a deeper document into the opening — a concrete number, a vivid example, a positioning line the author already wrote but didn't surface.
+
+**Compress Built By.** One line: name, affiliation, motivation. Multi-line bios with degree and years of experience belong on LinkedIn, not in a README.
+
 **Preserve voice.** If the existing README has personality — humor, directness, a distinctive tone — that's a feature, not a bug. A rewrite that's more "correct" but less human is a downgrade. Match the author's voice, don't flatten it.
 
 **Not every project needs the same README.** A consumer product paints a picture of the experience. A developer tool explains architecture. A library lets the code talk. Adjust your approach to the project, not the other way around.
