@@ -9,11 +9,19 @@ A README is for humans. But increasingly, AI reads it first — someone pastes a
 
 This doesn't mean you write for AI. It means the bar for clarity just went up. Vague descriptions that a human might skim past will cause an AI to misrepresent your project. A README that's clear enough for AI to explain correctly is a README that's clear enough for anyone.
 
+## Before You Rewrite
+
+Run the quality tests on the existing README first. If it passes, don't rewrite — suggest the 1-2 specific improvements that would make it better. A precise edit beats a rewrite every time.
+
+**Preserve voice.** If the existing README has personality — humor, directness, a distinctive tone — that's a feature, not a bug. A rewrite that's more "correct" but less human is a downgrade. Match the author's voice, don't flatten it.
+
+**Not every project needs the same README.** A consumer product paints a picture of the experience. A developer tool explains architecture. A library lets the code talk. Adjust your approach to the project, not the other way around.
+
 ## Five Principles
 
 **1. Problem before solution.** Open with pain, not product. The reader should feel the problem before they see your name. A feature list is not an opening.
 
-**2. Show, don't describe.** A before/after example is the most persuasive element in a README. For tools: show output. For libraries: show code. For visual projects: show a screenshot. The medium changes; the principle doesn't.
+**2. Show, don't describe.** A before/after example is the most persuasive element in a README. For tools: show output. For libraries: show code. For visual projects: show a screenshot. For consumer products: paint the experience. The medium changes; the principle doesn't.
 
 **3. Timing is respect.** Tell people how long things take — to install, to get a first result, to run the full pipeline. People make adoption decisions based on time investment.
 
@@ -27,16 +35,16 @@ Adapt weight by project type. Not every section needs equal depth.
 
 | Section | What it covers | Weight by type |
 |---|---|---|
-| **Opening** | Problem → solution → what's different | Heavy for tools/products. Light for libraries (the code speaks). Skip the pitch for internal tools — go straight to usage. |
-| **What it looks like** | Before/after, screenshot, code example, demo GIF | Heavy for visual projects and tools with output. A code snippet for libraries. |
-| **Components** | What's in the box, user-facing only | Only if there are multiple components. Skip for single-purpose libraries. |
-| **Quick start** | Install → first result → "that's it" | Always heavy. This is the one section every README needs to nail. |
-| **How it works** | User-perspective explanation of what happens | Medium for tools with pipelines or modes. Light or skip for simple libraries. |
+| **Opening** | Problem → solution → what's different | Heavy for tools/products. Light for libraries (the code speaks). Skip the pitch for internal tools — go straight to usage. Consumer products: paint the experience, not the architecture. |
+| **What it looks like** | Before/after, screenshot, code example, demo GIF | Heavy for visual projects and tools with output. A code snippet for libraries. Consumer products: describe the experience. |
+| **Components** | What's in the box, user-facing only | Only if there are multiple components. Skip for single-purpose libraries and consumer products. |
+| **Quick start** | Install → first result → "that's it" | Always heavy. This is the one section every README needs to nail. Lead with the simplest path (Docker one-liner > multi-step manual setup). |
+| **How it works** | User-perspective explanation of what happens | Medium for tools with pipelines or modes. Light or skip for simple libraries. Consumer products: keep it to 3 steps max. |
 | **Built by** | Person, affiliation, motivation | One line. Always. |
 
 ### Opening
 
-3-5 short paragraphs for tools and products. For libraries, 1-2 sentences plus a code example is often better — the code IS the pitch.
+3-5 short paragraphs for tools and products. For libraries, 1-2 sentences plus a code example is often better — the code IS the pitch. For consumer products, paint a moment the reader recognizes — "You have a 45-minute commute and 12 tabs you'll never read" works because everyone's been there.
 
 **Anti-patterns:**
 - Starting with "[Project] is a..." or "A tool that..."
@@ -47,14 +55,14 @@ Adapt weight by project type. Not every section needs equal depth.
 ### Quick start
 
 The most important section for every project type. Must contain:
-1. Install (one code block)
+1. Install (one code block — lead with the simplest option)
 2. First result (one concrete example — real-sounding, not placeholder text)
 3. "That's it." or equivalent signal that the reader is done
 4. Link to full guide for everything else
 
 ## Quality Tests
 
-Run all four before shipping:
+Run all four before shipping. If the existing README passes, suggest targeted edits instead of rewriting.
 
 **Substitution test.** Replace your project name with [PROJECT]. If the opening still works, it's too generic. Rewrite until removal of the name breaks the sentence.
 
@@ -72,10 +80,15 @@ Fails every test. Replace "MyTool" with anything — sentence still works. No pr
 
 ## What Good Looks Like
 
-**For a tool/product:**
+**For a developer tool:**
 > You ask an AI to research something and write it up. It reads well. Then someone asks "where did this number come from?" and you don't know. The document is fluent and completely unverifiable.
 
 Pain first. Project name nowhere. The reader is nodding before you've introduced your solution.
+
+**For a consumer product:**
+> You have a 45-minute commute and 12 tabs you'll never read.
+
+One sentence. You've been there. The product doesn't need to explain itself yet — the problem does.
 
 **For a library:**
 > ```python
