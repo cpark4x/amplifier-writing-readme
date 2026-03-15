@@ -17,6 +17,8 @@ Run the quality tests on the existing README first. If it passes, don't rewrite 
 
 **Compress Built By.** One line: name, affiliation, motivation. Multi-line bios with degree and years of experience belong on LinkedIn, not in a README.
 
+**Spike repos are fine as-is.** Learning projects, explorations, and failed experiments don't need the full treatment. A 4/10 README on a weekend spike is appropriate — don't over-engineer it.
+
 **Preserve voice.** If the existing README has personality — humor, directness, a distinctive tone — that's a feature, not a bug. A rewrite that's more "correct" but less human is a downgrade. Match the author's voice, don't flatten it.
 
 **Not every project needs the same README.** A consumer product paints a picture of the experience. A developer tool explains architecture. A library lets the code talk. Adjust your approach to the project, not the other way around.
@@ -43,6 +45,7 @@ Adapt weight by project type. Not every section needs equal depth.
 | **What it looks like** | Before/after, screenshot, code example, demo GIF | Heavy for visual projects and tools with output. A code snippet for libraries. Consumer products: describe the experience. |
 | **Components** | What's in the box, user-facing only | Only if there are multiple components. Skip for single-purpose libraries and consumer products. |
 | **Quick start** | Install → first result → "that's it" | Always heavy. This is the one section every README needs to nail. Lead with the simplest path (Docker one-liner > multi-step manual setup). |
+| **Opening for bundles/plugins** | Problem → capability → install | Always start with the problem sentence before the capability description. "Sessions fill up and you lose your work" before "automatic session scope management." |
 | **How it works** | User-perspective explanation of what happens | Medium for tools with pipelines or modes. Light or skip for simple libraries. Consumer products: keep it to 3 steps max. |
 | **Built by** | Person, affiliation, motivation | One line. Always. |
 
