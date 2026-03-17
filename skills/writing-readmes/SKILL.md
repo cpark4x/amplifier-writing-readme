@@ -42,7 +42,7 @@ Adapt weight by project type. Not every section needs equal depth.
 | Section | What it covers | Weight by type |
 |---|---|---|
 | **Opening** | Problem → solution → what's different | Heavy for tools/products. Light for libraries (the code speaks). Skip the pitch for internal tools — go straight to usage. Consumer products: paint the experience, not the architecture. |
-| **What it looks like** | Before/after, screenshot, code example, demo GIF | Heavy for visual projects and tools with output. A code snippet for libraries. Consumer products: describe the experience. |
+| **What it looks like** | Before/after, screenshot, code example, demo GIF | Heavy for visual projects and tools with output. A code snippet for libraries. Consumer products: describe the experience. **Keep examples under 10 lines.** Show the minimum that communicates the shape -- full format specs belong in docs, not here. |
 | **Components** | What's in the box, user-facing only | Only if there are multiple components. Skip for single-purpose libraries and consumer products. |
 | **Quick start** | Install → first result → "that's it" | Always heavy. This is the one section every README needs to nail. Lead with the simplest path (Docker one-liner > multi-step manual setup). |
 | **Opening for bundles/plugins** | Problem → capability → install | Always start with the problem sentence before the capability description. "Sessions fill up and you lose your work" before "automatic session scope management." |
@@ -79,8 +79,7 @@ Don't force a pattern. Read the project, feel the problem, and the right shape u
 The most important section for every project type. Must contain:
 1. Install (one code block — lead with the simplest option)
 2. First result (one concrete example — real-sounding, not placeholder text)
-3. "That's it." or equivalent signal that the reader is done
-4. Link to full guide for everything else
+3. **Closure signal — "That's it" or equivalent.** This is the most underrated element in a README. The reader just followed your install steps and got a result. Tell them they've succeeded. Without it, they keep scrolling looking for more required steps. One sentence: "That's it -- you're running." Then link to the full guide for everything else.
 
 ## Quality Tests
 
@@ -93,6 +92,22 @@ Run all four before shipping. If the existing README passes, suggest targeted ed
 **30-second test.** Show the README to someone for 30 seconds. Can they tell you what it does and whether it's relevant to them? If not, it fails.
 
 **Explain-it-back test.** Paste your README into an AI and ask "explain this project to me." If the AI gets it wrong or stays vague, your README isn't clear enough. This is the real-world test — it's what most people will actually do.
+
+## The Tightening Pass
+
+A README that passes all four quality tests can still be loose. Passing means the content is right. Tightening means the weight is right.
+
+Run this after the quality tests pass, not before.
+
+| Check | What to look for | Fix |
+|-------|------------------|-----|
+| **Opening paragraph count** | More than 2 paragraphs before the reader sees what the tool does? | Compress. Two paragraphs max: one for the problem, one for the solution. |
+| **Example weight** | Code examples longer than 10 lines? | Trim to the minimum that communicates the format. Full reference examples belong in docs, not the README. |
+| **Repeated pain** | The problem stated more than once in different words? | Pick the sharper version, delete the other. |
+| **Closure signal** | Does Quick Start end with a clear "you're done" signal? | Add "That's it" or equivalent after the first result. The reader needs to know they've succeeded. |
+| **Built By bloat** | More than one line? | One sentence. Motivation, not biography. |
+
+**The test:** Read the README out loud. Every time you pause or lose energy, that's a section that's too long. Cut until the energy holds from top to bottom.
 
 ## What Bad Looks Like
 
